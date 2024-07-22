@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Продукты</title>
+</head>
+<body>
+    <div>
+        <h3>Список продуктов:</h3>
+        <table>
+            <tr>
+                <td><p>Название</p></td>
+                <td><p>Цена</p></td>
+            </tr>
+            @foreach (var b in ViewBag.Tovari)
+            {
+                <tr>
+                    <td><p>@b.Nazvanie</p></td>
+                    <td><p>@b.Price</p></td>
+                    <td><p><a href="/Home/Prod/@b.ID_tovara">Продажа</a></p></td>
+                </tr>
+            }
+        </table>
+        <p><a href="/Home/Index">Назад</a></p>
+    </div>
+</body>
+</html>
+

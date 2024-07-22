@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Электронная ведомость</title>
+</head>
+<body>
+    <div>
+        <h3>Список продаж</h3>
+        <table>
+            <tr>
+                <td><p>Продал   Купил</p></td>
+            </tr>
+            @foreach (var b in ViewBag.PokupAndProd)
+            {
+                    <tr>
+                    <td><p>@b</p></td>
+                    </tr>
+            }
+        </table>
+        <p><a href="/Home/Index">В меню</a></p>
+    </div>
+</body>
+</html>
+
